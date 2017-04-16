@@ -11,14 +11,7 @@ app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-
-
-
-
-
-
-
-// app.use(express.static(__dirname));
+app.use(express.static(__dirname));
 
 app.get('/', function(req,res){
   res.render('index');
