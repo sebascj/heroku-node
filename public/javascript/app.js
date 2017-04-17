@@ -1,5 +1,7 @@
 $(document).ready(function(){
-  $(".wrapper").show();
+  setTimeout(function(){
+    $(".wrapper").show();
+  },200);
   var scroll_start = 0;
   var startchange = $('#startchange');
   var offset = startchange.offset();
