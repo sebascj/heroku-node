@@ -2,6 +2,10 @@
 body, html {
     height: 100%;
 }
+br, h1 {
+  padding: 0;
+  margin: 0;
+}
 
 .navbar-default {
     background-color: transparent;
@@ -21,6 +25,16 @@ body, html {
     background-size: cover;
 }
 
-.middle-parallax-image {
+.carousel-content{
+  width: 100%;
+}
+
+.profile-parallax-image {
   background-image: url("/assets/background.jpg");
+}
+.projects-parallax-image {
+  background-image: url("/assets/slide02.jpg");
+}
+.contact-parallax-image {
+  background-image: url("/assets/slide01.jpg");
 }
