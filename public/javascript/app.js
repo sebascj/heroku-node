@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $(".wrapper").show();
   var scroll_start = 0;
   var startchange = $('#startchange');
   var offset = startchange.offset();

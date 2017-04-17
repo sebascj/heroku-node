@@ -29,6 +29,12 @@ br, h1 {
   width: 100%;
 }
 
+.wrapper {
+  display: none;
+  height: 700px;
+
+}
+
 .profile-parallax-image {
   background-image: url("/assets/background.jpg");
 }
