@@ -17,6 +17,26 @@ br, h1 {
     z-index: 10007;
 }
 
+.navbar-brand img{
+  width: 800%;
+  position: absolute;
+  top:10px;
+  left:100px;
+}
+.navbar-brand{
+  position: relative;
+}
+
+.nav >li >a {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.navbar-toggle {
+  padding: 10px;
+  margin: 25px 15px 25px 0;
+}
+
 .parallax {
     height: 100%;
     background-attachment: fixed;
