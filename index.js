@@ -5,8 +5,6 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var nodemailer = require('nodemailer');
 var router = express.Router();
-var xoauth2 = require('xoauth2');
-
 
 var app = express();
 var PORT = process.env.PORT || 3000;
