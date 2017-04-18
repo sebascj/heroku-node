@@ -1,13 +1,15 @@
 doctype html
-html(lang="en")
+html(lang="en" ng-app='briefcase')
   head
     title Mi Portafolio
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
     link(rel='stylesheet', href='styles/styles.css')
 
   body
-    include plain.html
-    include modal.html
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
-    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-    script(src='javascript/app.js')
+    div(ng-controller="MainCtrl as ctrl")
+      include plain.html
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+      script(src='bower_components/angular/angular.js')
+      script(src='bower_components/angular-bootstrap/ui-bootstrap-tpls.js')
+      script(src='javascript/app.js')

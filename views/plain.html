@@ -60,14 +60,11 @@
   </div>
 </div>
 
-
-
 <div class="wrapper">
   <div class="parallax profile-parallax-image">
   <h1>Profile space</h1>
   <br>
   <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
-
   </div>
 
   <div class="parallax projects-parallax-image projects">
@@ -82,62 +79,16 @@
     </div>
 
     <!-- Seccion applicaciones -->
-
     <div class="container center">
       <div class="row">
-        <div class="col-xs-6 col-md-3">
-          <span class="thumbnail openModal" data-toggle="modal" data-target="#exampleModal">
-            <img src="http://placehold.it/171x180" alt="img">
-          </span>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <span class="thumbnail openModal" data-toggle="modal" data-target="#exampleModal">
-            <img src="http://placehold.it/171x180" alt="img">
-          </span>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <span class="thumbnail openModal" data-toggle="modal" data-target="#exampleModal">
-            <img src="http://placehold.it/171x180" alt="img">
-          </span>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <span class="thumbnail openModal" data-toggle="modal" data-target="#exampleModal">
-            <img src="http://placehold.it/171x180" alt="img">
-          </span>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-6 col-md-3">
-          <span class="thumbnail openModal" data-toggle="modal" data-target="#exampleModal">
-            <img src="http://placehold.it/171x180" alt="img">
-          </span>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <span class="thumbnail openModal" data-toggle="modal" data-target="#exampleModal">
-            <img src="http://placehold.it/171x180" alt="img">
-          </span>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <span class="thumbnail openModal" data-toggle="modal" data-target="#exampleModal">
-            <img src="http://placehold.it/171x180" alt="img">
-          </span>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <span class="thumbnail openModal" data-toggle="modal" data-target="#exampleModal">
-            <img src="http://placehold.it/171x180" alt="img">
+        <div ng-repeat="(name, resource) in ctrl.apps " class="col-xs-6 col-md-3">
+          <span class="thumbnail openModal" ng-click="ctrl.openModal(name)">
+            <img src="{{resource}}" alt="{{name}}">
           </span>
         </div>
       </div>
     </div>
 
-<!-- Seccion ilustraciones -->
     <div class="row">
       <div class="col-xs-6 col-md-3 col-md-offset-1">
           <div class="project-section">
@@ -146,79 +97,17 @@
           </div>
       </div>
     </div>
-
-
+    <!-- Seccion ilustraciones -->
     <div class="container center">
       <div class="row">
-        <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/171x180" alt="img">
-          </a>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/171x180" alt="img">
-          </a>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/171x180" alt="img">
-          </a>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/171x180" alt="img">
-          </a>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/171x180" alt="img">
-          </a>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/171x180" alt="img">
-          </a>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/171x180" alt="img">
-          </a>
-        </div>
-
-        <div class="col-xs-6 col-md-3">
-          <a href="#" class="thumbnail">
-            <img src="http://placehold.it/171x180" alt="img">
-          </a>
+        <div ng-repeat="(name, resource) in ctrl.apps " class="col-xs-6 col-md-3">
+          <span class="thumbnail openModal" ng-click="ctrl.openModal(name)">
+            <img src="{{resource}}" alt="{{name}}">
+          </span>
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
-
 
   <div class="parallax contact-parallax-image">
     <div class="container">
@@ -246,10 +135,3 @@
     </div>
   </div>
 </div>
-
-
-<!-- <div style="height:500px;background-color:red;font-size:36px">
-  Scroll Up and Down this page to see the parallax scrolling effect.
-  This div is just here to enable scrolling.
-  Tip: Try to remove the background-attachment property to remove the scrolling effect.
-</div> -->
