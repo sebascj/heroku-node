@@ -45,25 +45,67 @@ briefcaseApp.controller('MainCtrl', ['$uibModal', function($uibModal) {
     event.preventDefault();
   });
 
-  ctrl.apps = {
-    chocolates: "http://placehold.it/171x180",
-    monstruos: "http://placehold.it/171x180",
-    bicicletas: "http://placehold.it/171x180",
-    gatos: "http://placehold.it/171x180",
-    perros: "http://placehold.it/171x180",
-    casas: "http://placehold.it/171x180",
-    edificios: "http://placehold.it/171x180",
-    carros: "http://placehold.it/171x180"
-  }
+  // ctrl.apps = {
+  //   chocolates: "http://placehold.it/171x180",
+  //   monstruos: "http://placehold.it/171x180",
+  //   bicicletas: "http://placehold.it/171x180",
+  //   gatos: "http://placehold.it/171x180",
+  //   perros: "http://placehold.it/171x180",
+  //   casas: "http://placehold.it/171x180",
+  //   edificios: "http://placehold.it/171x180",
+  //   carros: "http://placehold.it/171x180"
+  // }
 
-  ctrl.openModal = function(name) {
+  // ctrl.apps = {
+  //   chocolates: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180'],
+  //   monstruos: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180'],
+  //   bicicletas: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180'],
+  //   bicicletas: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
+  // }
+
+  ctrl.apps = {
+    monsters: {
+      main: 'assets/apps/monsters/monstersMain.jpg',
+      related: ['assets/apps/monsters/monstersModal01.jpg', 'assets/apps/monsters/monstersModal02.jpg', 'assets/apps/monsters/monstersModal03.jpg', 'assets/apps/monsters/monstersModal04.jpg']
+    },
+    chocolates: {
+      main: 'http://placehold.it/171x180',
+      related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
+    },
+    perros: {
+      main: 'http://placehold.it/171x180',
+      related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
+    },
+    gatos: {
+      main: 'http://placehold.it/171x180',
+      related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
+    }
+  };
+
+
+
+  ctrl.openModal = function(projectName, projectImages) {
+    console.log(projectName);
+    console.log(projectImages);
+
+    var project = {
+      name: projectName,
+      images: projectImages
+    };
+
+
     var modalInstance = $uibModal.open({
       animation: true,
       ariaLabelledBy: 'modal-title',
       ariaDescribedBy: 'modal-body',
       templateUrl: 'tpl/modal.html',
-      controllerAs: ctrl,
-      size: 'lg'
+      controller: 'modalController',
+      size: 'lg',
+      resolve: {
+        project: function () {
+          return project;
+        }
+      }
     });
     modalInstance.result.then(function (selectedItem) {
       console.log('Modal Open');
@@ -73,5 +115,3 @@ briefcaseApp.controller('MainCtrl', ['$uibModal', function($uibModal) {
   };
 
 }]);
-
-// });

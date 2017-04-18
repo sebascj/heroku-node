@@ -7,14 +7,29 @@ var nodemailer = require('nodemailer');
 var router = express.Router();
 
 var app = express();
-var PORT = process.env.PORT || 3000;
-
-app.set('view engine', 'jade');
+var PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/public/views');
+app.set('view engine', 'jade');
+
+app.get('/', function(req,res) {
+  res.render('index');
+  // res.sendFile(path.join(__dirname + '/public/views/index.html'));
+});
+
+
+
+
+
+
+
+
 
 app.use('/sayHello', router);
 
@@ -48,10 +63,6 @@ var message = {
   subject: 'Notification',
   text: text
 }
-
-app.get('/', function(req,res){
-  res.render('index');
-});
 
 app.listen(PORT, function() {
    console.log(`Api rest corriendo en http://localhost:${PORT}`);

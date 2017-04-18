@@ -1,52 +1,20 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{project.name}}</h3>
+</div>
 
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://placehold.it/171x180" alt="img">
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://placehold.it/171x180" alt="img">
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://placehold.it/171x180" alt="img">
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://placehold.it/171x180" alt="img">
-    </a>
+<div class="modal-body" id="modal-body">
+  <div class="container center">
+    <div class="row">
+      <div ng-repeat="image in project.images track by $index" class="col-xs-6 col-md-3">
+        <span class="thumbnail">
+          <img ng-src="{{image}}">
+        </span>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://placehold.it/171x180" alt="img">
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://placehold.it/171x180" alt="img">
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://placehold.it/171x180" alt="img">
-    </a>
-  </div>
-
-  <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="http://placehold.it/171x180" alt="img">
-    </a>
-  </div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="">Cancel</button>
 </div>
