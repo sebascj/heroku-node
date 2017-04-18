@@ -24,8 +24,8 @@ function handleSayHello(req, res) {
   var transporter = nodemailer.createTransport({
     service: 'SendGrid',
     auth: {
-      user: 'sh4k',
-      pass: 'Palmeras12!$'
+      user: process.env.SENDGRID_USERNAME,
+      pass: process.env.SENDGRID_PASSWORD
     }
   });
 
