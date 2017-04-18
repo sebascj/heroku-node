@@ -7,6 +7,8 @@ $(document).ready(function(){
   var offset = startchange.offset();
   var windowSize = $(window).width();
 
+
+
   function navOpacity() {
     scroll_start = $(this).scrollTop();
     if(scroll_start > offset.top || windowSize < 1200) {
@@ -28,6 +30,27 @@ $(document).ready(function(){
         navOpacity();
      });
   }
+
+  $( "#target" ).submit(function( event ) {
+    $.ajax({
+    type: "POST",
+    url: '/sayHello',
+    data: {example: "example"},
+    success: function(data){
+      console.log(data);
+    },
+  });
+
+  event.preventDefault();
+});
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+
+$('.openModal').click(function(){
+  $('#myModal').modal('toggle');
+});
 
 
 
