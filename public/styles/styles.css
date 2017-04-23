@@ -82,10 +82,12 @@ h2  {
 }
 
 .parallax-carousel {
-    height: 100%;
-    background-attachment: fixed;
     background-position: center 30px;
     background-repeat: no-repeat;
+    position: fixed !important;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 .carousel-content{
