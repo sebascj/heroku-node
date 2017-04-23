@@ -23,7 +23,7 @@ h2  {
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
-    margin-bottom: 0px;
+    /*margin-bottom: 0px;*/
     position: fixed;
     width: 100%;
     padding-top: 50px;
@@ -33,7 +33,17 @@ h2  {
     padding-left: 30px;
 }
 .nav-item span {
+    font-weight: bold;
+    position: relative;
+    top:10px;
+    font-size: 15px;
+    color: gray !important;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.nav-item span:hover {
     color: #025E73 !important;
+
 }
 
 .navbar-brand img{
@@ -45,15 +55,6 @@ h2  {
 }
 .navbar-brand{
   position: relative;
-}
-
-.nav >li >span {
-  /*padding-top: 30px;*/
-  /*padding-bottom: 30px;*/
-  /*margin-bottom: 20px;*/
-  font-size: 15px;
-
-  letter-spacing: 2px;
 }
 
 .navbar-toggle {
@@ -198,7 +199,7 @@ h2  {
 }
 
  @media (min-width: 990px) {
-     .nav >li >span {
+     .nav-item span {
        padding-top: 60px;
      }
  }
