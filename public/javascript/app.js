@@ -67,19 +67,19 @@ briefcaseApp.controller('MainCtrl', ['$uibModal', function($uibModal) {
     monsters: {
       main: 'assets/apps/monsters/monstersMain.jpg',
       related: ['assets/apps/monsters/monstersModal01.jpg', 'assets/apps/monsters/monstersModal02.jpg', 'assets/apps/monsters/monstersModal03.jpg', 'assets/apps/monsters/monstersModal04.jpg']
-    },
-    chocolates: {
-      main: 'http://placehold.it/171x180',
-      related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
-    },
-    perros: {
-      main: 'http://placehold.it/171x180',
-      related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
-    },
-    gatos: {
-      main: 'http://placehold.it/171x180',
-      related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
-    }
+  }
+    // chocolates: {
+    //   main: 'http://placehold.it/171x180',
+    //   related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
+    // },
+    // perros: {
+    //   main: 'http://placehold.it/171x180',
+    //   related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
+    // },
+    // gatos: {
+    //   main: 'http://placehold.it/171x180',
+    //   related: ['http://placehold.it/171x180', 'http://placehold.it/171x180', 'http://placehold.it/171x180']
+    // }
   };
 
 
