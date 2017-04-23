@@ -7,9 +7,9 @@ briefcaseApp.controller('MainCtrl', ['$uibModal', function($uibModal) {
   var offset = startchange.offset();
   var windowSize = $(window).width();
 
-  setTimeout(function(){
-    $(".wrapper").show();
-  },200);
+  // setTimeout(function(){
+  //   $(".wrapper").show();
+  // },200);
 
   function navOpacity() {
     scroll_start = $(this).scrollTop();

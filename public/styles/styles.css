@@ -53,9 +53,9 @@ br, h1 {
     margin: 0 auto;
 }
 
-.wrapper {
+/*.wrapper {
   display: none;
-}
+}*/
 
 .profile-parallax-image {
   background-image: url("/assets/background.jpg");
