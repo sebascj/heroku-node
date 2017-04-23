@@ -20,6 +20,11 @@ h2  {
     color: #025E73;
 }
 
+.collapsed {
+    position: relative;
+    top:-19px;
+}
+
 .navbar-default {
     background-color: transparent;
     border-color: transparent;
@@ -43,15 +48,12 @@ h2  {
 }
 .nav-item span:hover {
     color: #025E73 !important;
-
 }
 
 .navbar-brand img{
   width: 400px;
   position: absolute;
   top:-50px;
-  /*top:px;*/
-  /*left:100px;*/
 }
 .navbar-brand{
   position: relative;
@@ -68,6 +70,13 @@ h2  {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.parallax-carousel {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center 30px;
+    background-repeat: no-repeat;
 }
 
 .carousel-content{

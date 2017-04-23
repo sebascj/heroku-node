@@ -9,7 +9,7 @@ briefcaseApp.controller('MainCtrl', ['$uibModal', '$anchorScroll','$location', f
 
   function navOpacity() {
     scroll_start = $(this).scrollTop();
-    if(scroll_start - 100 > offset.top || windowSize < 1200) {
+    if(scroll_start - 100 > offset.top || windowSize < 770) {
           $(".navbar-default").css('background-color', '#DFE8E6');
     } else {
           $('.navbar-default').css('background-color', 'transparent');
@@ -92,6 +92,7 @@ briefcaseApp.controller('MainCtrl', ['$uibModal', '$anchorScroll','$location', f
     ctrl.goToLocation = function(location) {
         $anchorScroll.yOffset = 100;
         $location.hash(location);
+        console.log($location.hash(location));
         $anchorScroll();
     }
 }]);
