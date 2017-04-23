@@ -96,6 +96,81 @@ br, h1 {
 .openModal {
   cursor: pointer;
 }
+ /* Profile */
+ .profile {
+     padding: 100px 0 10px 0;
+     height: 650px;
+ }
+.profile-picture {
+    border-radius: 50%;
+    border: 5px solid #A7DFDD;
+    width: 200px;
+    position:relative;
+}
+.profile-picture_decoration-top{
+    position: absolute;
+    width: 150px;
+    top: -30px;
+    left: -20px;
+}
+.profile-picture_decoration-bottom{
+    position: absolute;
+    width: 150px;
+    top: 85px;
+    left: 95px;
+    -moz-transform: scale(-1, -1);
+    -o-transform: scale(-1, -1);
+    -webkit-transform: scale(-1, -1);
+    transform: scale(-1, -1);
+}
+.profile-description {
+    width: 500px;
+    /*height: 300px;*/
+    background-color: #A7DFDD;
+    position: relative;
+}
+
+.profile-description_triangle {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -20px;
+
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    border-top: 20px solid #A7DFDD;
+}
+.profile-description_text p{
+    position: relative;
+    padding: 10px;
+    text-align: justify;
+}
+.profile-title {
+    padding: 0 0 30px 0;
+    margin: 10px 0;
+
+}
+
+.profile-title h2 {
+    padding: 0;
+    margin: 0;
+}
+
+.hobbie {
+    position: relative;
+    background-color: #1896A4;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 0 20px 0 0;
+}
+.hobbie-icon {
+    position: absolute;
+    color: white;
+}
+ /* End Profile */
 
 @media (min-width: 768px) {
   .modal-dialog {

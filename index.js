@@ -1,11 +1,12 @@
 'use strict'
 
+// Requires //
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 var nodemailer = require('nodemailer');
-var router = express.Router();
 
+var router = express.Router();
 var app = express();
 var PORT = process.env.PORT || 5000;
 
@@ -45,10 +46,10 @@ function handleSayHello(req, res) {
   });
 
   transporter.sendMail(message, function(error, info){
-    if(error){
+    if (error) {
         console.log(error);
         res.json({yo: 'error'});
-    }else{
+    } else {
         console.log('Message sent: ' + info.response);
         res.json({yo: info.response});
     };
